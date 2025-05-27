@@ -38,12 +38,23 @@ Why?​
 2) Lightweight and easy to parse: JSON is small in size, uses less data, and is fast to send/receive over the internet.​
 3) Language-independent: JSON can be understood and used by almost any programming language.​
 
-#Endpoint Methods Used
-**GET- Used to fetch/retrive data
-POST- To create new data
-PUT- to whole record
-PATCH- to update certain records
-DELETE- to surgically remove data**
+## ⚙️ HTTP Methods
+
+| Method  | Action                     |
+|---------|----------------------------|
+| GET     | Fetch data                 |
+| POST    | Create new resource        |
+| PUT     | Update whole resource      |
+| PATCH   | Partially update resource  |
+| DELETE  | Delete resource            |
+
+---
+
+## 🧪 API Endpoint Used
+
+Base URL:  
+`https://68355401cd78db2058c0f896.mockapi.io/api/v2/employees/Users`
+
 
 Samples from https://mockapi.io/projects/68355401cd78db2058c0f897
 
@@ -120,7 +131,7 @@ curl --location --request PATCH 'https://68355401cd78db2058c0f896.mockapi.io/api
 **Screenshot Patch Method**
 ![image](https://github.com/user-attachments/assets/7d0551ee-8380-4f68-a47a-18fc0abf5446)
 
-**Exaplanation:**
+**Explanation:**
 GET: Fetches list of users
 POST: Creates a new user
 PATCH: Updates user partially
