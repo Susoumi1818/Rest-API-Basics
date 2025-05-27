@@ -25,6 +25,7 @@ Response:
 
 Screenshot #GET
 
+
 ```Here we are only returning users with active status```
 
 Validate Status Codes
