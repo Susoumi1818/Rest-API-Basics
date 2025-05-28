@@ -16,7 +16,7 @@ CORS (Cross-Origin Resource Sharing)
 Why some frontend apps get "CORS error"
 How APIs allow/disallow certain origins
 
---------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 **Explanation of the API Versioning, Rate-Limiting, CORS, and Throttling in detail**
 
@@ -48,5 +48,68 @@ v2 is available for new phones with more power
 ✅ Keeps both audiences happy, and nothing breaks!
 
 **Rate-Limiting**
+Rate limiting ensures that a user, app, or IP address can only make a certain number of requests in a given time window (like 100 requests per minute). APIs can be expensive to run. Limits save money. It ensures all users get a fair chance to access the data. 
+Too many requests = overload = crash!!!
+
+It’s like setting a speed limit on a road — not to stop you, but to protect everyone from accidents.
+For example, Suppose a person is taking food every 5 seconds. You can only come 5 times per minute.
+
+Response
+{
+  "status": 429,
+  "message": "Too Many Requests"
+}
+**Rate Limiting = "You’ve hit your limit. No more requests."**
+
+The API developer who owns the API creates the API rate limit. They decide
+decide:
+How many requests per minute/hour/day are allowed.
+Whether limits apply per user, per IP, per API key, etc.
+What response to send if the limit is crossed
+
+-----------------------------------------------------------------------------------------------
+
+**Throttling** 
+Throttling manages the speed of your work and the number of requests you can make in a second.
+Manage traffic smoothly.
+You can go to the buffet, but only once every 30 seconds.
+For example, You’re allowed unlimited visits, but only once every 10 seconds.
+
+**Throttling = "You can continue, but slowly."**
+Why APIs Use Throttling:
+Prevent users from hammering the server too fast
+Keeps the system stable and fair for all users
+Helps avoid server overload in high traffic situations
+
+You are not blocked in Throttling, unlike Rate Limit, but you are slowed down.
+
+Real-World API | Rate Limit vs Throttling Example:
+✅ 100 requests per minute (Rate Limit)
+🐢 Only 1 request every 2 seconds (Throttle)
+So:
+If you send more than 1 request per 2 seconds, it gets delayed or queued.
+If you send more than 100 requests in a minute, you get blocked with 429 error.
+
+-----------------------------------------------------------------------------------------------
+
+**CORS = Cross-Origin Resource Sharing**
+
+When your website tries to fetch data from a different origin, browsers protect users by blocking these requests unless the other site explicitly allows it. A browser security rule that blocks calls across domains. The Browsers enforces it, not servers.
+
+You're at a restaurant A.com You bring in food from restaurant B.com
+The restaurant manager (your browser) says:
+
+“Hey! You can’t bring food (data) from another place unless we’ve been told it's okay.”
+That’s CORS in action.
+
+You fetch data from an API, and the browser says:❌ “Access to fetch at 'https://xyz.com/api' from origin 'https://abc.com' has been blocked by CORS policy.”
+
+It means the API at xyz.com has not given permission to abc.com to access it.
+
+Error response: CORS policy: No 'Access-Control-Allow-Origin'
+How to fix CORS?	Add CORS headers on the API side to allow specific domains
+
+-----------------------------------------------------------------------------------------------
+
 
 
