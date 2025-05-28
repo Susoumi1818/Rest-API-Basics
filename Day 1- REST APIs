@@ -49,6 +49,22 @@ Why?​
 | DELETE  | Delete resource            |
 
 ---
+Headers: In API World:When your app talks to an API, it sends headers like:
+Authorization: Bearer <token> → Who’s asking?
+Content-Type: application/json → What kind of data am I sending?
+Accept: application/json → What kind of response do I want?
+
+X-API-Version: v2 → Which version of the API do I want?
+Example: Ordering a Pizza
+Imagine you're ordering a pizza online (this is your API request).
+When you send the order, you also include:
+Your address (so they know where to deliver)
+Your phone number (in case they need to call)
+Whether you're vegetarian (so they don’t send meat!)
+What language you speak (so they respond correctly)
+
+These are all like headers — they're not the pizza 🍕 (the main data) — but they help the server process the request correctly.
+
 
 ## 🧪 API Endpoint Used
 
