@@ -47,4 +47,6 @@ v2 is available for new phones with more power
 
 ✅ Keeps both audiences happy, and nothing breaks!
 
+**Rate-Limiting**
+
 
