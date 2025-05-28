@@ -109,7 +109,13 @@ It means the API at xyz.com has not given permission to abc.com to access it.
 Error response: CORS policy: No 'Access-Control-Allow-Origin'
 How to fix CORS?	Add CORS headers on the API side to allow specific domains
 
+If CORS is missing or misconfigured, your frontend app won’t be able to use the API response in browsers, causing functionality to break, even though the API itself works fine.
 -----------------------------------------------------------------------------------------------
 
+V2 with humid details
+![image](https://github.com/user-attachments/assets/262fd672-cb51-40ae-8587-cc1c63cae0e7)
+
+V1 with watertemp details as well
+![image](https://github.com/user-attachments/assets/baf08f47-dae7-46f3-bdd0-048271aba3d9)
 
 
